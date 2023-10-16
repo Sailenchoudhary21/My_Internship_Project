@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Product Page</title>
+  <style>
+    /* CSS Styles for product page */
+    .product {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .product img {
+      width: 200px;
+      height: 200px;
+    }
+
+    .product-info {
+      flex-grow: 1;
+      margin-left: 20px;
+    }
+
+    .product-info h2 {
+      margin-bottom: 10px;
+    }
+
+    .product-info p {
+      margin-bottom: 10px;
+    }
+
+    .shopping-cart {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+
+    .cart-button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Product Page</h1>
+
+  <div class="product">
+    <img src="images.jpg" alt="Dress">
+    <div class="product-info">
+      <h2>Dress</h2>
+      <p>"Experience fashion that embraces comfort and style. Our clothing offers effortless elegance for any occasion."</p>
+      <p> Price: $9.99</p>
+      <button class="cart-button" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="product">
+    <img src="mobile.jpg.jpg" alt="mobile">
+    <div class="product-info">
+      <h2>Mobile</h2>
+      <p>"Stay connected and experience the latest technology with our feature-packed mobile phone. Sleek design and advanced functionality in the palm of your hand."</p>
+      <p>Price: $99.99</p>
+      <button class="cart-button" onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+
+  <div class="shopping-cart">
+    <button class="cart-button" onclick="viewCart()">View Cart</button>
+  </div>
+
+  <script>
+    // JavaScript for shopping cart functionality
+    var cartItems = [];
+
+    function addToCart() {
+      // Add the selected product to cartItems array
+      cartItems.push("Dress");
+      alert("Added to Cart!");
+    }
+
+    function viewCart() {
+      // Display the items in the cartItems array
+      alert("Cart Items: " + cartItems.join(", "));
+    }
+  </script>
+</body>
+</html>
